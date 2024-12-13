@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .terms {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Travel Guide Inquiry Form</h1>
+<form action="/submit" method="POST">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone No:</label>
+    <input type="tel" id="phone" name="phone" pattern="\d{10}" maxlength="10" required title="Please enter a 10-digit phone number">
+    
+    <label for="destination">Your Expertise:</label>
+    <input type="text" id="destination" name="destination" required>
+
+    <label for="travelDate">Travel Date:</label>
+    <input type="date" id="travelDate" name="travelDate" required>
+
+    <label for="travelType">Type of Travel:</label>
+    <select id="travelType" name="travelType" required>
+        <option value="">Select...</option>
+        <option value="leisure">Leisure</option>
+        <option value="business">Business</option>
+        <option value="adventure">Adventure</option>
+        <option value="family">Family</option>
+        <option value="romantic">Romantic</option>
+    </select>
+
+    <label for="message">Additional Information:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+    <div class="terms">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree with the <a href="/terms-and-conditions" target="_blank">terms and conditions</a> and I am fully liable that all the information provided are true.</label>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function validateNumberInput(input) {
+      // Remove any non-digit characters
+      input.value = input.value.replace(/\D/g, '');
+    }
+  </script>
+</body>
+</html>
