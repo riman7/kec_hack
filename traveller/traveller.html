@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Google Maps Place Autocomplete</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
-<body>
+<body id="traveller-body">
     <nav class="navbar">
         <div class="logo">Logo</div>
         <div class="map-button">
@@ -19,17 +20,12 @@
         <div class="profile"></div>
     </nav>
     
-    <div class="line-with-text">
-        <hr class="line">
-            <strong>
-                <span class="text">Discover and book tours and activities</span>
-            </strong>
-        <hr class="line">
-    </div>
+
 
     <div id="map-all">
+        <input type="text" id="pac-input">
         <div id="map"></div>
-
+       
         <div class="place-list">
             <div class="place-list-child" id="place-list-child-1">
                 <div class="place-list-head">
@@ -68,32 +64,45 @@
 
         </div>
     </div>
-    <div class="search">
-        <input type="search" class="search-input" placeholder="Search...">  
+
+    <div id="no-map">
+        <div class="line-with-text">
+            <hr class="line">
+                <strong>
+                    <span class="text">Discover and book tours and activities</span>
+                </strong>
+            <hr class="line">
+        </div>
+        <div class="search">
+            <input type="search" class="search-input" placeholder="Search...">  
+        </div>
+        <div class="container">
+            <div class="card">
+                <img src="../images/1.png" alt="Run by Local Experts">
+                <h2>Run by Local Experts</h2>
+                <p>We always make a sincere effort and see that we only hire and train the best guides in the industry.</p>
+            </div>
+            <div class="card">
+                <img src="../images/2.png" alt="Experienced Team">
+                <h2>Experienced Team</h2>
+                <p>With more than 10,000 people joining our tours annually, we have a proven track record of providing quality trips that exceed our guests' expectations.</p>
+            </div>
+            <div class="card">
+                <img src="../images/3.png" alt="Responsible Tourism">
+                <h2>Responsible Tourism</h2>
+                <p>Every time you do a hiking trip with us, you're helping to conserve wild landscapes for our kids and for future generations.</p>
+            </div>
+            <div class="card">
+                <img src="../images/4.png" alt="Supporting Local Communities">
+                <h2>Supporting Local Communities</h2>
+                <p>Nepal Trekking Planner is a purely nurtured and owned native trekking company in Nepal.</p>
+            </div>
+        </div>
     </div>
+
     <!-- Load the Google Maps JavaScript API with the Places library -->
-    <div class="container">
-        <div class="card">
-            <img src="../images/1.png" alt="Run by Local Experts">
-            <h2>Run by Local Experts</h2>
-            <p>We always make a sincere effort and see that we only hire and train the best guides in the industry.</p>
-        </div>
-        <div class="card">
-            <img src="../images/2.png" alt="Experienced Team">
-            <h2>Experienced Team</h2>
-            <p>With more than 10,000 people joining our tours annually, we have a proven track record of providing quality trips that exceed our guests' expectations.</p>
-        </div>
-        <div class="card">
-            <img src="../images/3.png" alt="Responsible Tourism">
-            <h2>Responsible Tourism</h2>
-            <p>Every time you do a hiking trip with us, you're helping to conserve wild landscapes for our kids and for future generations.</p>
-        </div>
-        <div class="card">
-            <img src="../images/4.png" alt="Supporting Local Communities">
-            <h2>Supporting Local Communities</h2>
-            <p>Nepal Trekking Planner is a purely nurtured and owned native trekking company in Nepal.</p>
-        </div>
-    </div>
+
+
      <script async defer
         src="https://maps.gomaps.pro/maps/api/js?key=AlzaSyrDUHXPl9sAth5QFoIMXJil0CYRTh32jzj&libraries=geometry,places&callback=initMap">
     </script>

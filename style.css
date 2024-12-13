@@ -114,8 +114,8 @@ div.search{
 
 }
 #map-all{
-    /* display: none; */
-  }
+    display: none;
+}
         /* Style the input field */
 #pac-input {
     margin: 5px auto var(--horizontal-margin);
@@ -147,7 +147,7 @@ body.body-inital-page {
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.5; /* Reduce opacity here */
-    z-index: -1; /* Place it behind the content */
+    z-index: -1; 
 }
 
 /* Style for the boxes */

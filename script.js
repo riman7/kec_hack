@@ -1,13 +1,22 @@
 let map;
-const all_map = getElementById('map-all');
+let autocomplete;
 
-        let autocomplete;
-        function openmap(){
-            console.log('clicked');
-            // all_map.
-            
+const traveller_body = document.getElementById("traveller-body");
+
+function openmap(){
+        if(document.getElementById("map-all").style.display == "none"||document.getElementById("map-all").style.display == ""){
+            document.getElementById("map-all").style.display = "block";
+            document.getElementById("no-map").style.display = "none";
+            traveller_body.classList.toggle("withmap");
         }
-        function initMap() {
+        else{
+            document.getElementById("map-all").style.display = "none";
+            document.getElementById("no-map").style.display = "block";
+            traveller_body.classList.toggle("withmap");
+        }
+}
+
+function initMap() {
             // Create the map centered on a default location
             map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 27.7172, lng: 85.3240 }, // Kathmandu, Nepal
@@ -43,4 +52,3 @@ const all_map = getElementById('map-all');
                 });
             });
         }
-
