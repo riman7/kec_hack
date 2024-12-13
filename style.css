@@ -2,18 +2,41 @@
     /* For 1rem = 10px */
     font-size: 62.5%;
     --theme-color: hsl(271, 90%, 60%);
-
+    --nav-size: 60px;
+    --horizontal-margin: 10px;
+    --search-height: 30px;
+}
+body{
+    margin: 0;
+    padding: 0;
 }
      
-     /* Set the size of the map */
-        #map {
-            height: 400px;
-            width: 100%;
-        }
+
+#map_page{
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    background-color: red;
+}
+div.search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+#map {
+    height: 800px;
+
+    width: 100%;
+
+}
         /* Style the input field */
-        #pac-input {
-            margin-top: 10px;
-            width: 300px;
-            padding: 5px;
-            font-size: 14px;
-        }
+#pac-input {
+    margin: var(--nav-size) auto var(--horizontal-margin);
+    width: 30em;
+    height: var(--search-height);
+    padding: 5px;
+    border-radius: 3em;
+    font-size: 14px;
+    border: 2px, ;
+}
