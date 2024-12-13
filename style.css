@@ -317,3 +317,11 @@ nav.navbar {
         height: 100px;
         margin-bottom: 20px;
     }
+    .terms {
+        display: flex;
+        align-items: center; /* Vertically align the checkbox and text */
+    }
+    
+    .terms input[type="checkbox"] {
+        margin-right: 10px; /* Add some space between the checkbox and the text */
+    }

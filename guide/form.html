@@ -25,18 +25,17 @@
             border-radius: 5px;
         }
         button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 15px; /* Increased padding */
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px; /* Increased font size */
+        width: 100%; /* Optional: full width */
+    }
         button:hover {
             background-color: #218838;
-        }
-        .terms {
-            margin: 10px 0;
         }
     </style>
 </head>
@@ -71,10 +70,13 @@
 
     <label for="message">Additional Information:</label>
     <textarea id="message" name="message" rows="4"></textarea>
+    <label for="fileUpload">Upload File:</label>
+<input type="file" id="fileUpload" name="fileUpload" accept=".pdf,.doc,.docx,.jpg,.png" onchange="updateFileName()">
     <div class="terms">
         <input type="checkbox" id="terms" name="terms" required>
         <label for="terms">I agree with the <a href="/terms-and-conditions" target="_blank">terms and conditions</a> and I am fully liable that all the information provided are true.</label>
     </div>
+    <br>
     <button type="submit">Submit</button>
 </form>
 
@@ -82,6 +84,11 @@
     function validateNumberInput(input) {
       // Remove any non-digit characters
       input.value = input.value.replace(/\D/g, '');
+    }
+    function updateFileName() {
+        const fileInput = document.getElementById('fileUpload');
+        const fileStatus = document.getElementById('fileStatus');
+        
     }
   </script>
 </body>
