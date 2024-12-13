@@ -26,6 +26,25 @@
             margin: 0 15px;
             text-decoration: none;
         }
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            background: #f4f4f4;
+            position: relative;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .marquee-content a {
+            text-decoration: none; /* Remove underline from the link */
+            color: inherit; /* Inherit color from parent to maintain consistency */
+        }
         .hero {
             background-image: url('hero-image.jpg');
             background-size: cover;
@@ -41,34 +60,16 @@
             margin: 0;
         }
         .hero p {
-            font-family: 'Times New Roman', Times, serif ;
+            font-family: 'Times New Roman', Times, serif;
             font-size: 1.5em;
-        }
-        .featured-destinations {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-        }
-        .destination {
-            background: #b7a00c;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 20px;
-            width: 30%;
-            text-align: center;
-        }
-        .destination img {
-            width: 100%;
-            border-radius: 8px;
         }
         footer {
             text-align: center;
-            padding: 20px;
-            background: #98cb0c;
-            color: #179fcc;
+            padding: 10px 0;
+            background: #237843;
+            color: white;
             position: relative;
             bottom: 0;
-            height: 30%;
             width: 100%;
         }
         nav a {
@@ -84,15 +85,6 @@ nav a:hover {
     background-color: #26ba58; /* Change to a different color on hover */
     transform: scale(1.1); /* Slightly increase the size */
 }
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #237843;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
     </style>
 </head>
 <body>
@@ -106,28 +98,16 @@ footer {
     </nav>
 </header>
 
+<div class="marquee">
+    <div class="marquee-content">
+        Feel free to <a href="./other file/contact.html" class="abc">Contact us</a> if you encounter any problem with Traveller
+    </div>
+</div>
+
 <div class="hero">
     <h1>Explore Nepal</h1>
     <p>Your adventure starts here!</p>
 </div>
-
-<section id="destinations" class="featured-destinations">
-    <div class="destination">
-        <img src="destination1.jpg" alt="Destination 1">
-        <h2>Kathmandu Food Tour</h2>
-        <p>A class of its own!</p>
-    </div>
-    <div class="destination">
-        <img src="destination2.jpg" alt="Destination 2">
-        <h2>Patan</h2>
-        <p>The city that breathes an ancient air.</p>
-    </div>
-    <div class="destination">
-        <img src="destination3.jpg" alt="Destination 3">
-        <h2>Swoyambhunath</h2>
-        <p>The monkey temple of Manjushree.</p>
-    </div>
-</section>
 
 <footer>
     <p>&copy; 2024 Nepal Travel. All rights reserved.</p>
