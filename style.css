@@ -97,4 +97,7 @@ nav.navbar {
     text-align: right;
     border: 1px solid black;
   }
+  #map-all{
+    display: none;
+  }
   
