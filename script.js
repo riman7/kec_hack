@@ -1,7 +1,11 @@
 let map;
+const all_map = getElementById('map-all');
+
         let autocomplete;
         function openmap(){
             console.log('clicked');
+            // all_map.
+            
         }
         function initMap() {
             // Create the map centered on a default location
@@ -39,3 +43,4 @@ let map;
                 });
             });
         }
+

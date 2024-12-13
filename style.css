@@ -29,10 +29,11 @@ body.body-inital-page {
     align-items: center;
     height: 100vh;
     margin: 0;
+    gap: 2em;
 }
 body.body-inital-page h1{
     font-family: "Rowdies", sans-serif;
-    font-size: 10em;
+    font-size: 10rem;
     color: #1b0086;
 }
 /* Pseudo-element for the background image */
@@ -52,14 +53,20 @@ body.body-inital-page h1{
     z-index: -1; /* Place it behind the content */
 }
 .box{
-    border: 2px solid rgba(51, 51, 51, 0.8);
-    width: 30em;
+    border: 2px solid rgba(58, 1, 243, 0.8);
+    color: #2575fc;
+    width: 32rem;
     padding: 20px 0;
     background-color:#00b4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     margin: 10px;
-    font-size: 1em;
+    font-size: 45px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+}
+.box:hover{
+    box-shadow: #2575fc 2px;
 }
 a{
     color:black ;
@@ -107,7 +114,7 @@ div.search{
 
 }
 #map-all{
-    display: none;
+    /* display: none; */
   }
         /* Style the input field */
 #pac-input {
