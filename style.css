@@ -5,14 +5,31 @@
     --nav-size: 60px;
     --horizontal-margin: 10px;
     --search-height: 30px;
-   
+    
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-     
+body{
+    font-family: Arial, sans-serif;
+}  
+
+
+.txt {
+    text-align: center; /* Center the text */
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+    font-size: 5em; /* Large font size */
+    line-height: 1.2; /* Line height for better readability */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add some padding */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+}
+
+
 #map_page{
     max-width: 100vw;
     max-height: 100vh;
@@ -32,7 +49,7 @@ div.search{
 
 }
 #map-all{
-    /* display: none; */
+    display: none;
   }
         /* Style the input field */
 #pac-input {
@@ -135,4 +152,24 @@ nav.navbar {
     border: 1px solid black;
   }
 
+  .line-with-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .line {
+    border: none;
+    border-top: 1px solid #9e9e9e; /* Gray color for the line */
+    flex-grow: 0.1;
+    margin: 0 5px; /* Space between line and text */
+  }
+  
+  .text {
+    font-family: Arial, sans-serif; /* Adjust font to match the image */
+    font-size: 30px; /* Adjust size as needed */
+    color: #757575; /* Gray color for text */
+    white-space: nowrap; /* Prevents wrapping */
+  }
   
