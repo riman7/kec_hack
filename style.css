@@ -10,6 +10,9 @@
     --button-color: yellow;
     
 }
+#convertBtn {
+    margin-right: 10px; /* Adjust the value as needed */
+}
 *{
     margin: 0;
     padding: 0;
@@ -82,7 +85,7 @@ body.body-inital-page {
 body.body-inital-page h1{
     font-family: "Rowdies", sans-serif;
     font-size: 10rem;
-    color: #1b0086;
+    color: #26156ce9;
 }
 /* Pseudo-element for the background image */
 .body-inital-page::before{
@@ -105,7 +108,7 @@ body.body-inital-page h1{
     color: #2575fc;
     width: 32rem;
     padding: 20px 0;
-    background-color:#00b4;
+    background-color:rgba(15, 15, 110, 0.267);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     margin: 10px;
@@ -114,7 +117,8 @@ body.body-inital-page h1{
     font-weight: 900;
 }
 .box:hover{
-    box-shadow: #2575fc 2px;
+    box-shadow: rgba(27, 27, 105, 1
+    )#275ebc 2px;
 }
 a{
     color:black ;
@@ -243,7 +247,7 @@ h1 {
 }
 
 .box:hover {
-    background-color: rgba(117, 117, 225, 0.8); /* Full blue color on hover */
+    background-color: rgba(27, 27, 105, 0.8); /* Full blue color on hover */
     opacity: 0.7; /* Decrease transparency on hover */
 }
 
