@@ -6,8 +6,48 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
-    
+
 }
+nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spread items */
+    padding: 10px 20px;
+    background-color: var(--backgroud-color); /* Navbar background color */
+    color: #000000; /* Text color */
+  }
+  
+  div.logo img{
+    width: 60px; /* Make the image take the full width of the container */
+    height: 60px; /* Make the image take the full height of the container */
+    object-fit: contain; /* Scale the image to maintain its aspect ratio */
+    border-radius: 100%;
+    border: #000000 solid 1px;
+}
+  
+  nav .map-button {
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+  }
+  nav .map-button button{
+    width: 7em;
+    height: 3em;
+    border-radius: 30px;
+  }
+  nav .profile {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: white;
+    text-align: right;
+    border: 1px solid black;
+  }
+
 
 .container {
     text-align: center;
