@@ -211,6 +211,41 @@ body.body-inital-page {
     border-radius: 8px;
     text-align: center;
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(20px); /* Start slightly below */
+    }
+    to {
+        opacity: 1; /* End fully opaque */
+        transform: translateY(0); /* End in original position */
+    }
+}
+
+h1 {
+    animation: fadeIn 1s ease forwards; /* Apply the fade-in animation to h1 */
+}
+
+.option {
+    opacity: 0; /* Start with boxes hidden */
+    animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+    animation-delay: 1s; /* Delay to start after h1 animation */
+    animation-fill-mode: forwards; /* Keep the final state after animation */
+}
+
+.box {
+    background-color: rgba(217, 217, 221, 0.8); /* Initial blue color with some transparency */
+    color: white; /* Text color */
+    padding: 20px; /* Padding for the box */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Transition for smooth effect */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.box:hover {
+    background-color: rgba(117, 117, 225, 0.8); /* Full blue color on hover */
+    opacity: 0.7; /* Decrease transparency on hover */
+}
 
 /* Style for headings */
 h2 {
@@ -238,6 +273,7 @@ h2 {
 ::-webkit-scrollbar-track {
     background: #ffffff;
 }
+
 
 /* General styling for the button list */
 .button-list {
@@ -336,9 +372,7 @@ h2 {
         width: 24%;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
-    .card h1{
-
-    }
+    
     
     .card img {
         width: 100px;
@@ -619,9 +653,6 @@ button:hover {
     }
 }
 
-div.infographic{
-
-}
 div.infographic img{
     width: 100%;
     height: auto; /* Maintain the aspect ratio of the image */
