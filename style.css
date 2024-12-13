@@ -6,6 +6,8 @@
     --nav-size: 60px;
     --horizontal-margin: 10px;
     --search-height: 30px;
+    --backgroud-color: #ffffff;
+    --button-color: yellow;
     
 }
 *{
@@ -173,8 +175,8 @@ nav.navbar {
     align-items: center;
     justify-content: space-between; /* Spread items */
     padding: 10px 20px;
-    background-color: #333; /* Navbar background color */
-    color: #fff; /* Text color */
+    background-color: var(--backgroud-color); /* Navbar background color */
+    color: #000000; /* Text color */
   }
   
   nav .logo {
@@ -200,6 +202,88 @@ nav.navbar {
     text-align: right;
     border: 1px solid black;
   }
+
+
+
+/* For Webkit browsers */
+::-webkit-scrollbar {
+    width: 4px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 1px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa; /* Color on hover */
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+/* General styling for the button list */
+.button-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Styling individual buttons in the list */
+.button-list button {
+    background-color: #007bff;
+    min-width: 150px;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.button-list button:hover {
+    background-color: #0056b3;
+}
+
+/* Make buttons stack vertically on smaller screens */
+@media (max-width: 768px) {
+    .button-list {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button-list button {
+        margin: 5px 0;
+        width: 100%;
+    }
+}
+
+/* Optional: Style the line with text */
+.line-with-text {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.line-with-text .line {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+}
+
+.line-with-text .text {
+    font-size: 16px;
+    margin-top: -10px;
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+
+
 
   .line-with-text {
     display: flex;

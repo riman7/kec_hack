@@ -2,19 +2,22 @@ let map;
 let autocomplete;
 let autocompleteDestination;
 
-
 const traveller_body = document.getElementById("traveller-body");
 
 function openmap(){
+    var map_button2 = document.getElementById("map-button2");
         if(document.getElementById("map-all").style.display == "none"||document.getElementById("map-all").style.display == ""){
             document.getElementById("map-all").style.display = "block";
             document.getElementById("no-map").style.display = "none";
             traveller_body.classList.toggle("withmap");
+            map_button2.innerHTML = "Back";
         }
         else{
             document.getElementById("map-all").style.display = "none";
             document.getElementById("no-map").style.display = "block";
             traveller_body.classList.toggle("withmap");
+            traveller_body.classList.toggle("withmap");
+            map_button2.innerHTML = "MAP";
         }
 }
 
