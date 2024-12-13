@@ -4,58 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guide or Traveller</title>
-    <style>
-         body.body-inital-page {
-    position: relative;
-    height: 100vh; /* Ensure the body takes up the full viewport height */
-    overflow: hidden; /* Prevents the background from spilling
-     out if it's too large */
-     font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-}
 
-/* Pseudo-element for the background image */
-.body-inital-page::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('./images/logo.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0.5; /* Reduce opacity here */
-    z-index: -1; /* Place it behind the content */
-}
-        .box {
-            border: 2px solid rgba(51, 51, 51, 0.8); /* Less transparent border */
-            padding: 20px;
-            background-color:#00b4; /* Set the background color for the boxes */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            margin: 10px;
-        }
-        a{
-            color:black ;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freeman&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
     
 </head>
 <body class="body-inital-page">
     <!--#cfe7e5-->
     <!-- <img id="bglogo" src="./images/logo.png" alt=""> -->
-    <a href="./guide/guide.html"><div class="box">
-        <h2>Are you a guide?</h2>
-    </div></a>
-    <a href="index.html"><div class="box">
-        <h2>Are you a traveller?</h2>
-    </div></a>
+     <h1>Are you a</h1>
+     <div class="option">
+        <a href="./guide/guide.html">
+            <div class="box">
+                <h2>Guide?</h2>
+            </div>
+        </a>
+        <a href="index.html">
+            <div class="box">
+                <h2>Traveller?</h2>
+            </div>
+        </a>
+    </div>
 </body>
 </html>
