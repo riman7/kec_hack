@@ -1,5 +1,7 @@
 let map;
 let autocomplete;
+let autocompleteDestination;
+
 
 const traveller_body = document.getElementById("traveller-body");
 
@@ -30,6 +32,54 @@ function initMap() {
             directionsRenderer = new google.maps.DirectionsRenderer();
             directionsRenderer.setMap(map); // Bind directions to the map
             directionsRenderer.setPanel(document.getElementById('directions-panel')); // Bind directions to a panel
+
+            //new new
+
+    // Add autocomplete for origin input
+    const originInput = document.getElementById('origin-input');
+    autocompleteOrigin = new google.maps.places.Autocomplete(originInput);
+    autocompleteOrigin.bindTo('bounds', map);
+
+    // Add autocomplete for destination input
+    const destinationInput = document.getElementById('destination-input');
+    autocompleteDestination = new google.maps.places.Autocomplete(destinationInput);
+    autocompleteDestination.bindTo('bounds', map);
+
+    // Handle place changes for origin
+    autocompleteOrigin.addListener('place_changed', () => {
+        const place = autocompleteOrigin.getPlace();
+        if (!place.geometry) {
+            console.log("No details available for the input: '" + place.name + "'");
+            return;
+        }
+
+        // Adjust map view if desired
+        if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);
+        }
+    });
+
+    // Handle place changes for destination
+    autocompleteDestination.addListener('place_changed', () => {
+        const place = autocompleteDestination.getPlace();
+        if (!place.geometry) {
+            console.log("No details available for the input: '" + place.name + "'");
+            return;
+        }
+
+        // Adjust map view if desired
+        if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);
+        }
+    });
+
+
 
 
 
@@ -63,7 +113,7 @@ function initMap() {
             });
         }
 
-//new
+//
         function getDirections() {
             const originInput = document.getElementById('origin-input').value;
             const destinationInput = document.getElementById('destination-input').value;

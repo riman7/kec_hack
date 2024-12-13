@@ -167,66 +167,6 @@ h2 {
 }
 
 
-
-div.place-list{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: centre;
-    gap: 4px;
-    padding: 2px;
-
-    height:200px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    overflow-x: scroll;
-    
-}
-div.place-list-child{
-    width: 31%;
-    min-width: 300px;
-    max-width: 400px;
-    height: 98%;
-    border: solid black 1px;
-    border-radius: 5px;
-    background-color: aliceblue;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-}
-div.place-list-child:hover {
-    /* transform: translateY(-5px);  */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-}
-div.place-list-child .place-list-head h1 {
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Styling for the image container */
-div.place-list-child .place-list-img img {
-    width: 100%; /* Ensure image scales with container */
-    /* height: 70%;  */
-    margin: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow to the image */
-}
-
-/* Styling for the description */
-div.place-list-child .place-list-discription p {
-    font-size: 14px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 1.5;
-    color: #555;
-    text-align: justify;
-    padding: 0 5px; /* Add spacing inside the text area */
-}
-
 /* Nav */
 nav.navbar {
     display: flex;
@@ -469,12 +409,18 @@ h2 {
 }
 
 
-#directions-container {
-    margin: 15px 0;
+div.search-map{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+#directions-container {
+    margin: 5px 0;
+    display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
 }
 
 #directions-container input {

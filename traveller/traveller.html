@@ -22,12 +22,16 @@
     </nav>
     
     <div id="map-all">
+        <div class="search-map">
+            <input type="text" id="pac-input">
+        </div>
+
         <div id="directions-container">
             <input type="text" id="origin-input" placeholder="Enter origin">
             <input type="text" id="destination-input" placeholder="Enter destination">
             <button onclick="getDirections()">Get Directions</button>
         </div>
-        <input type="text" id="pac-input">
+
         <div id="map"></div>
        
 
