@@ -13,10 +13,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-}  
-
-
 
 body.body-inital-page {
     position: relative;
@@ -94,7 +90,11 @@ div.option{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
 }
 
-
+body.withmap{
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
 #map_page{
     max-width: 100vw;
     max-height: 100vh;
@@ -109,7 +109,6 @@ div.search{
 }
 #map {
     height: 800px;
-
     width: 100%;
 
 }
@@ -317,4 +316,86 @@ nav.navbar {
         height: 100px;
         margin-bottom: 20px;
     }
+
+
+
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-content {
+        display: flex;
+        gap: 170px;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-section {
+        flex: 1;
+        margin: 0 10px;
+    }
+    
+    .footer-section h2 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    
+    .footer-section p,
+    .footer-section ul {
+        font-size: 14px;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+        display: flex; /* Makes the list items align horizontally */
+        justify-content: center; /* Centers the links horizontally */
+        gap: 40px; /* Adds spacing between the links */
+    }
+    
+    .footer-section ul li {
+        margin: 0; /* Removes margin for inline styling */
+    }
+    
+    .footer-section ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 14px; /* Adjusts the font size */
+    }
+    
+    .footer-section ul li a:hover {
+        color: #ff9900; /* Changes color on hover */
+    }
+    /* .footer-section.social */
+    .footer-section.social a {
+        color: #fff;
+        margin: 10px 20px 0 20px;
+        font-size: 16px;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .footer-section.social a:hover {
+        color: #ff9900;
+    }
+    .footer-section.social div{
+        display: flex;
+        gap: 15px;
+    }
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+        color: #bbb;
+    }
+    
     
