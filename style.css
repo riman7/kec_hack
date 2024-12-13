@@ -82,8 +82,13 @@ nav.navbar {
   nav .map-button {
     font-size: 18px;
     text-align: center;
+    cursor: pointer;
   }
-  
+  nav .map-button button{
+    width: 7em;
+    height: 3em;
+    border-radius: 30px;
+  }
   nav .profile {
     width: 35px;
     height: 35px;
@@ -93,8 +98,3 @@ nav.navbar {
     border: 1px solid black;
   }
   
-  /* Optional: Styling for hover effect */
-  .navbar div:hover {
-    color: #00aaff;
-    cursor: pointer;
-  }

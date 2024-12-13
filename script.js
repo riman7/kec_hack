@@ -1,10 +1,13 @@
 let map;
         let autocomplete;
- 
+        function openmap(){
+            console.log('clicked');
+        }
         function initMap() {
             // Create the map centered on a default location
             map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: -33.8688, lng: 151.2195 }, // Default to Sydney, Australia
+                center: { lat: 27.7172, lng: 85.3240 }, // Kathmandu, Nepal
+
                 zoom: 13
             });
  
