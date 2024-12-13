@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-item {
+    background: #e9ecef;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #007bff; /* Left border for emphasis */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition */
+
+}
+.contact-item:hover {
+    background: #d1e7dd; /* Change background on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+.contact-item h2 {
+    margin: 0;
+    color: #007bff;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+    color: #ea5c5c; /* Change color on hover */
+}
+
+.contact-item p {
+    margin: 5px 0;
+    color: #555;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #237843;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <body>
+        <div class="container">
+            <h1>Emergency Contacts</h1>
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <h2><a href="https://www.nepalpolice.gov.np/" target="_blank">Police Department</a></h2>
+                    <p>Phone: 100</p>
+                    <p>Address: Sama Marga, Kathmandu, Bagmati, 46500</p>
+                </li>
+                <li class="contact-item">
+                    <h2><a href="https://www.fire.gov" target="_blank">Fire Department</a></h2>
+                    <p>Phone: 101</p>
+                    <p>Address: Basantapur Street, Kathmandu, Bagmati, 46500</p>
+                </li>
+                <li class="contact-item">
+                    <h2><a href="https://www.ambulance.gov" target="_blank">Ambulance Service</a></h2>
+                    <p>Phone: 102</p>
+                    <p>Address: Teku, Kathmandu, Bagmati, 46500</p>
+                </li>
+                <li class="contact-item">
+                    <h2><a href="https://www.embassy.gov" target="_blank">Local Embassy</a></h2>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: Maharajgung Rd, Kathmandu, Bagmati, 46500</p>
+                </li>
+                <li class="contact-item">
+                    <h2><a href="https://www.poisoncontrol.gov" target="_blank">Poison Control Center</a></h2>
+                    <p>Phone: (977) 61306651</p>
+                    <p>Address: Khumaltar, Kathmandu, Bagmati, 46500</p>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            <p>&copy; 2024 Nepal Travel. All rights reserved.</p>
+        </footer>
+    </body>
+    
+</html>
