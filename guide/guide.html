@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveler's Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+        }
+        .featured-destinations {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .destination {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+        }
+        .destination img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            height: 30%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Traveler's Guide</h1>
+    <nav>
+        <a href="#destinations">Destinations</a>
+        <a href="#tips">Travel Tips</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>Explore Nepal</h1>
+    <p>Your adventure starts here!</p>
+</div>
+
+<section id="destinations" class="featured-destinations">
+    <div class="destination">
+        <img src="destination1.jpg" alt="Destination 1">
+        <h2>Paris</h2>
+        <p>The city of lights and love.</p>
+    </div>
+    <div class="destination">
+        <img src="destination2.jpg" alt="Destination 2">
+        <h2>Tokyo</h2>
+        <p>A blend of tradition and modernity.</p>
+    </div>
+    <div class="destination">
+        <img src="destination3.jpg" alt="Destination 3">
+        <h2>New York</h2>
+        <p>The city that never sleeps.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Nepal Travel. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
