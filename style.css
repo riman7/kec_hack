@@ -5,10 +5,12 @@
     --nav-size: 60px;
     --horizontal-margin: 10px;
     --search-height: 30px;
+   
 }
-body{
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
      
 
@@ -16,7 +18,7 @@ body{
     max-width: 100vw;
     max-height: 100vh;
     overflow: hidden;
-    background-color: red;
+
 }
 div.search{
     width: 100%;
@@ -32,11 +34,67 @@ div.search{
 }
         /* Style the input field */
 #pac-input {
-    margin: var(--nav-size) auto var(--horizontal-margin);
+    margin: 5px auto var(--horizontal-margin);
     width: 30em;
     height: var(--search-height);
     padding: 5px;
     border-radius: 3em;
-    font-size: 14px;
-    border: 2px, ;
+    font-size: 2em;
+    border: 1px solid rgb(164, 164, 164) ;
 }
+div.package{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: centre;
+    gap: 4px;
+    padding: 2px;
+
+    height:200px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    overflow-x: scroll;
+}
+div.package-child{
+    width: 31%;
+    min-width: 300px;
+    max-width: 400px;
+    height: 98%;
+    background-color: aliceblue;
+}
+
+/* Nav */
+nav.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spread items */
+    padding: 10px 20px;
+    background-color: #333; /* Navbar background color */
+    color: #fff; /* Text color */
+  }
+  
+  nav .logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  nav .map-button {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  nav .profile {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: white;
+    text-align: right;
+    border: 1px solid black;
+  }
+  
+  /* Optional: Styling for hover effect */
+  .navbar div:hover {
+    color: #00aaff;
+    cursor: pointer;
+  }
