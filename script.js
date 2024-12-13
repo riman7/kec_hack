@@ -23,6 +23,16 @@ function initMap() {
 
                 zoom: 13
             });
+
+
+// new
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map); // Bind directions to the map
+            directionsRenderer.setPanel(document.getElementById('directions-panel')); // Bind directions to a panel
+
+
+
  
             const input = document.getElementById('pac-input');
  
@@ -52,3 +62,29 @@ function initMap() {
                 });
             });
         }
+
+//new
+        function getDirections() {
+            const originInput = document.getElementById('origin-input').value;
+            const destinationInput = document.getElementById('destination-input').value;
+        
+            if (!originInput || !destinationInput) {
+                alert("Please enter both origin and destination.");
+                return;
+            }
+        
+            const request = {
+                origin: originInput,
+                destination: destinationInput,
+                travelMode: google.maps.TravelMode.DRIVING // Can be DRIVING, WALKING, BICYCLING, TRANSIT
+            };
+        
+            directionsService.route(request, (result, status) => {
+                if (status === google.maps.DirectionsStatus.OK) {
+                    directionsRenderer.setDirections(result); // Display directions on map
+                } else {
+                    alert("Directions request failed due to " + status);
+                }
+            });
+        }
+        

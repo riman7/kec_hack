@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Google Maps Place Autocomplete</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./infographic.css">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body id="traveller-body">
@@ -20,49 +21,22 @@
         <div class="profile"></div>
     </nav>
     
-
-
     <div id="map-all">
+        <div id="directions-container">
+            <input type="text" id="origin-input" placeholder="Enter origin">
+            <input type="text" id="destination-input" placeholder="Enter destination">
+            <button onclick="getDirections()">Get Directions</button>
+        </div>
         <input type="text" id="pac-input">
         <div id="map"></div>
        
-        <div class="place-list">
-            <div class="place-list-child" id="place-list-child-1">
-                <div class="place-list-head">
-                    <h1>Swyambhu</h1>
-                </div>
-                <div class="place-list-img">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Swayambhunath_2018.jpg/1200px-Swayambhunath_2018.jpg" alt="swyambhu">
-                </div>
-                <!-- <div class="place-list-discription">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia odit quam perspiciatis accusantium, veniam quo corporis pariatur nisi inventore esse sequi eius eligendi dignissimos distinctio reprehenderit ex totam, cumque porro.</p>
-                </div> -->
-            </div>
-                <div class="place-list-child" id="place-list-child-2">
-                    <div class="place-list-head">
-                        <h1>Swyambhu</h1>
-                    </div>
-                    <div class="place-list-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Swayambhunath_2018.jpg/1200px-Swayambhunath_2018.jpg" alt="swyambhu">
-                    </div>
-                    <!-- <div class="place-list-discription">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia odit quam perspiciatis accusantium, veniam quo corporis pariatur nisi inventore esse sequi eius eligendi dignissimos distinctio reprehenderit ex totam, cumque porro.</p>
-                    </div> -->
-                </div>
 
-                <div class="place-list-child" id="place-list-child-3">
-                    <div class="place-list-head">
-                        <h1>Swyambhu</h1>
-                    </div>
-                    <div class="place-list-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Swayambhunath_2018.jpg/1200px-Swayambhunath_2018.jpg" alt="swyambhu">
-                    </div>
-                    <!-- <div class="place-list-discription">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia odit quam perspiciatis accusantium, veniam quo corporis pariatur nisi inventore esse sequi eius eligendi dignissimos distinctio reprehenderit ex totam, cumque porro.</p>
-                    </div> -->
-                </div>
 
-        </div>
+    
+        <div id="directions-panel" style="max-height: 200px; overflow-y: auto;"></div>
+    
+
+
     </div>
 
     <div id="no-map">
@@ -74,9 +48,9 @@
             <hr class="line">
         </div>
 
-        <div class="search">
+        <!-- <div class="search">
             <input type="search" class="search-input" placeholder="Search...">  
-        </div>
+        </div> -->
 
         <div class="container">
             <div class="card">
@@ -127,14 +101,81 @@
         </div>
         
         
+            <section class="review-rating-section">
+                <h2>Rate Our Packages</h2>
+                <div class="package-reviews">
+                    <!-- Adventure Package -->
+                    <div class="package-review">
+                        <h3>Adventure Package</h3>
+                        <div class="ratings">
+                            <div class="average-rating">
+                                <span>Average Rating: </span><span class="avg-stars" id="adventure-average">4.5</span>
+                            </div>
+                        </div>
+                        <form class="review-form">
+                            <textarea placeholder="Write your review here..."></textarea>
+                            <div class="stars" data-package="adventure">
+                                <span data-value="1">&#9733;</span>
+                                <span data-value="2">&#9733;</span>
+                                <span data-value="3">&#9733;</span>
+                                <span data-value="4">&#9733;</span>
+                                <span data-value="5">&#9733;</span>
+                            </div>
+                            <button type="submit">Submit Review</button>
+                        </form>
+                    </div>
+            
+                    <!-- Luxury Package -->
+                    <div class="package-review">
+                        <h3>Luxury Package</h3>
+                        <div class="ratings">
+                            <div class="average-rating">
+                                <span>Average Rating: </span><span class="avg-stars" id="luxury-average">4.0</span>
+                            </div>
+                        </div>
+                        <form class="review-form">
+                            <textarea placeholder="Write your review here..."></textarea>
+                            <div class="stars" data-package="luxury">
+                                <span data-value="1">&#9733;</span>
+                                <span data-value="2">&#9733;</span>
+                                <span data-value="3">&#9733;</span>
+                                <span data-value="4">&#9733;</span>
+                                <span data-value="5">&#9733;</span>
+                            </div>
+                            <button type="submit">Submit Review</button>
+                        </form>
+                    </div>
+            
+                    <!-- Budget Package -->
+                    <div class="package-review">
+                        <div class="ratings">
+                            <div class="average-rating">
+                                <span>Average Rating: </span><span class="avg-stars" id="budget-average">3.5</span>
+                            </div>
+                        </div>
+                        <form class="review-form">
+                            <textarea placeholder="Write your review here..."></textarea>
+                            <div class="stars" data-package="budget">
+                                <span data-value="1">&#9733;</span>
+                                <span data-value="2">&#9733;</span>
+                                <span data-value="3">&#9733;</span>
+                                <span data-value="4">&#9733;</span>
+                                <span data-value="5">&#9733;</span>
+                            </div>
+                            <button type="submit">Submit Review</button>
+                        </form>
+                    </div>
 
-        <div>
-            <h1>Review</h1>
-        </div>
 
-        <div class="circle">
 
-        </div>
+                </div>
+            </section>
+            
+            <div class="infographic">
+                <img src="/images/Infographic.jpg" alt="" srcset="">
+            </div>
+
+
 
         <footer class="footer">
             <div class="footer-section about">
@@ -180,5 +221,10 @@
     src="./gogleplaces2.js">
 </script> -->
 <script src="/script.js"></script>
+
+
+
+
+<script src="/traveller.js"></script>
 </body>
 </html>

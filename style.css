@@ -435,6 +435,168 @@ nav.navbar {
 
 
 
+/* Review Rating Section */
+.review-rating-section {
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.package-reviews {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+.package-review {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%; /* Adjust width for horizontal layout */
+}
+
+.package-review h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+#directions-container {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+#directions-container input {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#directions-container button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#directions-container button:hover {
+    background-color: #0056b3;
+}
+
+#directions-panel {
+    width: 90%;
+    max-width: 400px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+#directions-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+#directions-panel::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+#directions-panel::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}
+
+
+.review-form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: vertical;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.stars span {
+    font-size: 25px;
+    color: #ddd; /* Default star color */
+    transition: color 0.3s;
+}
+
+.stars span.active,
+.stars span:hover {
+    color: #ff9900; /* Active star color */
+}
+
+button {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff7f00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .package-review {
+        width: 100%; /* Stack vertically on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+div.infographic{
+
+}
+div.infographic img{
+    width: 100%;
+    height: auto; /* Maintain the aspect ratio of the image */
+    object-fit: cover;
+}
+
+
+
+
+
+
 
 
 
