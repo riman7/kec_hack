@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List</title>
+    <style>
+        .item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            position: relative;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+            transition: box-shadow 0.3s;
+        }
+
+        .item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .description {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 2; /* Show only 2 lines */
+            transition: opacity 0.3s;
+            margin-bottom: 10px; /* Space for the read more button */
+        }
+
+        .read-more {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        img {
+            width: 100%; /* Make the image responsive */
+            border-radius: 5px;
+        }
+.read-more {
+    color: blue;
+    cursor: pointer;
+    text-decoration: none; /* Change this line to remove underline */
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #237843;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+
+    <div class="item">
+        <h3>Nepal tour with Everest Sight Scene Flight</h3>
+        <img src="/images/everest.jpg" alt="Item Image 1">
+        <p>Estimated Cost: <strong>$2500</strong></p>
+        <div class="description">The Everest sightseeing mountain flight from Kathmandu is one of the most exclusive mountain flight tour packages in the world which provides a scenic view of Mount Everest (Top of the World 8848.86 M height). Everest sightseeing flights are operated every day from the Kathmandu domestic airport by a major airline in Nepal. The Mount Everest Sightseeing flight is the best way to view the beautiful Mountain range in a short duration without trekking from Kathmandu.</div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+
+    <div class="item">
+        <h3>Manaslu Circuit Trek Helicopter Return Trek</h3>
+        <img src="/images/manaslu.jpg" alt="Item Image 2">
+        <p>Estimated Cost: <strong>$1500</strong></p>
+        <div class="description">The Manaslu circuit trek is home to various monasteries, gompas, and mani walls that showcase Buddhist tradition and culture. You may see various Himalayan peaks that offer beautiful vistas, including Mt. Manaslu, Himalchuli, Ganesh Himal, Shringi Himal, Cheo Himal, and others. Similar landscapes may be seen on this Manaslu circuit helicopter return trek, including thick rhododendron woods, valleys, and crossings.</div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+
+    <div class="item">
+        <h3>Kali Gandaki Rafting </h3>
+        <img src="/images/kaligandaki.jpg" alt="Item Image 3">
+        <p>Estimated Cost: <strong>$800</strong></p>
+        <div class="description">With exciting white water rapids, spectacular mountain views, traditional villages, endless suspension bridges, waterfalls, pristine jungle rich in wildlife, deep gorges, cultural temples and beautiful white sandy beaches for camp, we consider this to be the best all round river adventure in Nepal.</div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+
+    <div class="item">
+        <h3>Unesco Heritage Site seeing Tour</h3>
+        <img src="/images/unseco.jpg" alt="Item Image 4">
+        <p>Estimated Cost: <strong>$450</strong></p>
+        <div class="description">A popular sightseeing journey that covers all seven of the Kathmandu Valley's UNESCO World Heritage Sites is known as the Seven World Heritage Day Tour of Kathmandu. You can expect:Kathmandu Durbar Square, Pashupati Temple, Swayambhunath Stupa, Patan Durbar Square,Bhaktpur Durbar Square, Changu Narayan Temple, and Nagarkot.</div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+    <div class="item">
+        <h3>Cg Temple and Lumbini Tour</h3>
+        <img src="/images/lumbini.jpg" alt="Item Image 4">
+        <p>Estimated Cost: <strong>$300</strong></p>
+        <div class="description">Lumbini tour in Nepal is a combination of the mountain scenery, historical and spirtual website, World heritage wesie and jungle hunting expedition with uniquely build speciality of bithplace of lord Buddha and architectured place CG Temple.</div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+    <footer>
+        <p>&copy; 2024 Nepal Travel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDescription(element) {
+            const description = element.previousElementSibling;
+            const isExpanded = description.style.display === "block";
+    
+            if (isExpanded) {
+                // Collapse the description
+                description.style.display = "-webkit-box"; // Show only 2 lines
+                element.textContent = "Read more"; // Change text to "Read more"
+            } else {
+                // Expand the description
+                description.style.display = "block"; // Show full description
+                element.textContent = "Read less"; // Change text to "Read less"
+            }
+        }
+    </script>

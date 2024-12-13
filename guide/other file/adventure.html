@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List</title>
+    <style>
+        .item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            position: relative;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+            transition: box-shadow 0.3s;
+        }
+
+        .item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .description {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 2; /* Show only 2 lines */
+            transition: opacity 0.3s;
+            margin-bottom: 10px; /* Space for the read more button */
+        }
+
+        .read-more {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        img {
+            width: 100%; /* Make the image responsive */
+            border-radius: 5px;
+        }
+.read-more {
+    color: blue;
+    cursor: pointer;
+    text-decoration: none; /* Change this line to remove underline */
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #237843;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+
+    <div class="item">
+        <h3>Rock Climbing in Nagarjung</h3>
+        <img src="/images/rock climbing.jpg" alt="Item Image 1">
+        <p>Estimated Cost: <strong>$100</strong></p>
+        <div class="description">It is located 3km in the northwest of Kathmandu valley in Nagarjun Forest Reserve. From you can continue to sacred Buddhist site Langlungten, Padmasambhava (Guru Rinpoche in Tibetan) took his meditation there. Beside, you will see good view of the Annapurna, Langtang, Machhapuchare, Manaslu and Ganesh Himal, Kathmandu valley.</div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+
+    <div class="item">
+        <h3>Paragliding in Pokhara</h3>
+        <img src="/images/paragliding.jpg" alt="Item Image 2">
+        <p>Estimated Cost: <strong>$150</strong></p>
+        <div class="description">Get into the sky on this tandem paragliding ride off the top of Sarangkot with round trip transportation from your hotel in Pokhara included. After you get picked up, you'll drive up the hill to Sarangkot. You'll meet your pilot and get ready for your flight. All the gear is provided, and your pilot controls the flight, so you can relax and enjoy the views of the surrounding Himalayas and Phewa Lake below.</div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+
+    <div class="item">
+        <h3>Mountain Cycling</h3>
+        <img src="/images/mountian cyclug.jpg" alt="Item Image 3">
+        <p>Estimated Cost: <strong>$200</strong></p>
+        <div class="description">The Round the Fewa Lake cycling tour in Pokhara is a one-of-a-kind adventure perfect for everyone, from beginners to seasoned pros. This tour stands out for its diverse trails that cater to every rider and its breathtaking journey through lush landscapes and cultural treasures.</div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+
+    <div class="item">
+        <h3>ABC Base Camp</h3>
+        <img src="/images/abc.jpg" alt="Item Image 4">
+        <p>Estimated Cost: <strong>$335</strong></p>
+        <div class="description">The Annapurna base camp serves as a gateway to the towering of Mount Annapurna, the 10th highest peak globally at 8,091 meters.</div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+    <div class="item">
+        <h3>Bungee</h3>
+        <img src="/images/bungee.jpg" alt="Item Image 4">
+        <p>Estimated Cost: <strong>$450</strong></p>
+        <div class="description">Nepal is a great destination to have your first bungee jump ever, and you'll come back as a better and stronger person.</div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+    <footer>
+        <p>&copy; 2024 Nepal Travel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDescription(element) {
+            const description = element.previousElementSibling;
+            const isExpanded = description.style.display === "block";
+    
+            if (isExpanded) {
+                // Collapse the description
+                description.style.display = "-webkit-box"; // Show only 2 lines
+                element.textContent = "Read more"; // Change text to "Read more"
+            } else {
+                // Expand the description
+                description.style.display = "block"; // Show full description
+                element.textContent = "Read less"; // Change text to "Read less"
+            }
+        }
+    </script>
