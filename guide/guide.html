@@ -120,6 +120,38 @@ nav a:hover {
             bottom: 0;
             width: 100%;
         }
+        .additional-content {
+    text-align: left; /* Align text to the left */
+    font-size: 16px; /* Set a base font size */
+    color: #333; /* Dark gray color for text */
+    margin: 15px; /* Margin around the section */
+    padding: 10px; /* Padding inside the section */
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.additional-content h2 {
+    color: red; /* Red color for headings */
+    font-size: 20px; /* Larger font size for headings */
+    margin-bottom: 10px; /* Space below the headings */
+}
+.image-gallery {
+    width: 100%; /* Set the width to 100% */
+    overflow: hidden; /* Hide overflow to prevent showing all images */
+    position: relative; /* Position relative for absolute positioning of slides */
+}
+
+.slides {
+    display: flex; /* Use flexbox for layout */
+    transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+}
+
+.slides img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin: 5px; /* Add some space between images */
+    border-radius: 5px; /* Optional: rounded corners for images */
+}
         nav a {
             color: #ffffff;
             margin: 0 15px;
@@ -155,7 +187,11 @@ nav a:hover {
             Feel free to <a href="./other file/contact.html" class="abc">Contact us</a> if you encounter any problem with Traveller
         </div>
     </div>
-    
+    <div class="image-gallery">
+        <div class="slides">
+            <img src="/images/everest.jpg" alt="Image 1" />
+            <img src="/images/ghalegaun.jpg" alt="Image 2" />
+        </div>
     <div class="why">
         <h1>Why to register on Nepal travels?</h1>
         <ul>
@@ -166,6 +202,7 @@ nav a:hover {
         </ul>
     </div>
     
+    
     <div class="steps">
         <h2 class="title">It's simple and fast:</h2>
         <ul>
@@ -173,16 +210,35 @@ nav a:hover {
             <li>You will get an email regarding your registration.</li>
         </ul>
     </div>
-    
-    <div class="hero">
-        <h1>Explore Nepal</h1>
-        <p>Your adventure starts here!</p>
+    <div class="additional-content">
+        <h2>Discover the Beauty of Nepal</h2>
+        <p>Nepal is a land of diverse cultures, stunning landscapes, and rich history. From the majestic Himalayas to the vibrant cities, there is so much to explore.</p>
+        <ul>
+            <li>Visit the iconic Mount Everest Base Camp.</li>
+            <li>Experience the rich culture in Kathmandu Valley.</li>
+            <li>Trek through the Annapurna Circuit.</li>
+            <li>Enjoy the wildlife in Chitwan National Park.</li>
+        </ul>
+        <p>Join us for an unforgettable journey and create memories that will last a lifetime!</p>
     </div>
-    
     <footer>
         <p>&copy; 2024 Nepal Travel. All rights reserved.</p>
     </footer>
+    <script>
+        let currentIndex = 0; // Start with the first image
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        const totalImages = images.length;
     
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % totalImages; // Loop back to the first image
+            const offset = -currentIndex * 100; // Calculate the offset for sliding
+            slides.style.transform = `translateX(${offset}%)`; // Apply the offset
+        }
+    
+        // Change image every 3 seconds (3000 milliseconds)
+        setInterval(showNextImage, 3000);
+    </script>
     </body>
 
 </body>
