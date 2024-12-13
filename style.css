@@ -1,0 +1,18 @@
+:root{
+    /* For 1rem = 10px */
+    font-size: 62.5%;
+    --theme-color: hsl(271, 90%, 60%);
+}
+     
+     /* Set the size of the map */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+        /* Style the input field */
+        #pac-input {
+            margin-top: 10px;
+            width: 300px;
+            padding: 5px;
+            font-size: 14px;
+        }
