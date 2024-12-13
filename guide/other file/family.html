@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List</title>
+    <style>
+        .item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            position: relative;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+            transition: box-shadow 0.3s;
+        }
+
+        .item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .description {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 2; /* Show only 2 lines */
+            transition: opacity 0.3s;
+            margin-bottom: 10px; /* Space for the read more button */
+        }
+
+        .read-more {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        img {
+            width: 100%; /* Make the image responsive */
+            border-radius: 5px;
+        }
+.read-more {
+    color: blue;
+    cursor: pointer;
+    text-decoration: none; /* Change this line to remove underline */
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #237843;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+
+    <div class="item">
+        <h3>Ghandruk</h3>
+        <img src="/images/ghandruk.jpg" alt="Item Image 1">
+        <p>Estimated Cost: <strong>$100</strong></p>
+        <div class="description">Ghandruk is a common place for treks in the Annapurna range of Nepal (Annapurna Base camp and Annapurna Circuit treks, in particular). The peaks of Mt Annapurna, Mt Machapuchare, Gangapurna and Mt Hiunchuli can be seen from the village, and it is also the gateway to the Poon hill.</div>
+    </div>
+
+    <div class="item">
+        <h3>Baithali Village Trek</h3>
+        <img src="/images/baithali.jpg" alt="Item Image 2">
+        <p>Estimated Cost: <strong>$150</strong></p>
+        <div class="description">This isolated Balthali Village Trek rewards you a variety of flora and fauna, friendly and hospitable Nepalese people, we can experience the grandeur view Langtang Himal, Ganesh Himal range, Manaslu, Dorje Lakpa, Gaurishankar, and Everest on the northern horizon. the place is less crowded as only a small number of tourist trek around the Kathmandu valley whilst most of the visitors go to major trekking routes such as; Everest base Camp, Annapurna Base Camp, Round Manaslu or Langtang Trekking etc. </div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+
+    <div class="item">
+        <h3>Chisapani Nagarkot Trekking</h3>
+        <img src="/images/chisapni.jpg" alt="Item Image 3">
+        <p>Estimated Cost: <strong>$200</strong></p>
+        <div class="description">The Chisapani Nagarkot Trek offers breathtaking views of the Himalayan Mountains, including Mount Everest, Langtang, Ganesh Himal, and Dorje Lakpa. The trek also takes you through beautiful forests of rhododendron and pine trees, with stunning vistas of the surrounding valleys and countryside.
+            The Chisapani Nagarkot Trek takes you through the Shivapuri National Park, which is home to a variety of wildlife, including deer, monkeys, and different species of birds.</div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+
+    <div class="item">
+        <h3>Jomsom Muktinath Trek</h3>
+        <img src="/images/jomsom.jpg" alt="Item Image 4">
+        <p>Estimated Cost: <strong>$335</strong></p>
+        <div class="description">Jomsom is a great place to start trekking. The diverse landscape and culture found along this trekking route give marvelous insight into the way of life of Nepali people of various ethnic groups.
+
+            The highlight is a trek through the deepest gorge in the world carved by the Kali Gandaki River, which originates in the Tibetan plateau to eventually flow into the Ganges in India.
+            
+            Not too far from Jomsom, you find Muktinath, the famous pilgrimage site for Buddhists as well as Hindus. To Hindus, Muktinath is a sacred place of salvation. They believe that bathing in the waters here guarantees salvation after death. The Hindu god, Brahma, is said to have lit the eternal flames that burn at Muktinath.</div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+    <div class="item">
+        <h3>Ghalegaun</h3>
+        <img src="/images/ghalegaun.jpg" alt="Item Image 4">
+        <p>Estimated Cost: <strong>$450</strong></p>
+        <div class="description">Ghale Gaun reflects the true village life of Nepal and the natural scenic setting with a repository of unique ethnic culture. One can really enjoy the home stay with delicious organic food together. The visit to Ghale Gaun as a village tour or Home Stay tour can be memorable in the life time. This region is the home to the popular honey hunters of Nepal. </div>
+        <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+    </div>
+    <footer>
+        <p>&copy; 2024 Nepal Travel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDescription(element) {
+            const description = element.previousElementSibling;
+            const isExpanded = description.style.display === "block";
+    
+            if (isExpanded) {
+                // Collapse the description
+                description.style.display = "-webkit-box"; // Show only 2 lines
+                element.textContent = "Read more"; // Change text to "Read more"
+            } else {
+                // Expand the description
+                description.style.display = "block"; // Show full description
+                element.textContent = "Read less"; // Change text to "Read less"
+            }
+        }
+    </script>
