@@ -3,82 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Google Maps Place Autocomplete</title>
+    <title>Guide or Traveller</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freeman&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="logo">Logo</div>
-        <div class="map-button">
-            <button onclick="openmap()">
-                MAP
-            </button>
-        </div>
-        <div class="profile"></div>
-    </nav>
     
-    <div class="line-with-text">
-        <hr class="line">
-            <strong>
-                <span class="text">Discover and book tours and activities</span>
-            </strong>
-        <hr class="line">
-    </div>
-
-    <div id="map-all">
-        <div id="map"></div>
-
-        <div class="place-list">
-            <div class="place-list-child" id="place-list-child-1">
-                <div class="place-list-head">
-                    <h1>Swyambhu</h1>
-                </div>
-                <div class="place-list-img">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Swayambhunath_2018.jpg/1200px-Swayambhunath_2018.jpg" alt="swyambhu">
-                </div>
-                <!-- <div class="place-list-discription">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia odit quam perspiciatis accusantium, veniam quo corporis pariatur nisi inventore esse sequi eius eligendi dignissimos distinctio reprehenderit ex totam, cumque porro.</p>
-                </div> -->
+</head>
+<body class="body-inital-page">
+    <!--#cfe7e5-->
+    <!-- <img id="bglogo" src="./images/logo.png" alt=""> -->
+     <h1>Are you a</h1>
+     <div class="option">
+        <a href="./guide/guide.html">
+            <div class="box">
+                <h2>Guide?</h2>
             </div>
-                <div class="place-list-child" id="place-list-child-2">
-                    <div class="place-list-head">
-                        <h1>Swyambhu</h1>
-                    </div>
-                    <div class="place-list-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Swayambhunath_2018.jpg/1200px-Swayambhunath_2018.jpg" alt="swyambhu">
-                    </div>
-                    <!-- <div class="place-list-discription">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia odit quam perspiciatis accusantium, veniam quo corporis pariatur nisi inventore esse sequi eius eligendi dignissimos distinctio reprehenderit ex totam, cumque porro.</p>
-                    </div> -->
-                </div>
-
-                <div class="place-list-child" id="place-list-child-3">
-                    <div class="place-list-head">
-                        <h1>Swyambhu</h1>
-                    </div>
-                    <div class="place-list-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Swayambhunath_2018.jpg/1200px-Swayambhunath_2018.jpg" alt="swyambhu">
-                    </div>
-                    <!-- <div class="place-list-discription">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia odit quam perspiciatis accusantium, veniam quo corporis pariatur nisi inventore esse sequi eius eligendi dignissimos distinctio reprehenderit ex totam, cumque porro.</p>
-                    </div> -->
-                </div>
-
-        </div>
+        </a>
+        <a href="index.html">
+            <div class="box">
+                <h2>Traveller?</h2>
+            </div>
+        </a>
     </div>
-    <div class="search">
-        <input type="search" class="search-input" placeholder="Search...">  
-    </div>
-    <!-- Load the Google Maps JavaScript API with the Places library -->
- 
-     <script async defer
-        src="https://maps.gomaps.pro/maps/api/js?key=AlzaSyrDUHXPl9sAth5QFoIMXJil0CYRTh32jzj&libraries=geometry,places&callback=initMap">
-    </script>
-    <!-- <script async defer
-    src="./gogleplaces2.js">
-</script> -->
-<script src="./script.js"></script>
 </body>
 </html>
