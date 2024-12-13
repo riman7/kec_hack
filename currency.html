@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange</title>
+    <link rel="stylesheet" href="./currency.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Currency Exchange</h1>
+        
+        <!-- Amount Input -->
+         <div class="npr">
+            <div class="input-container">
+                <input type="number" id="inputAmount" placeholder="Enter amount" />
+            </div>
+            <div class="npr-container">
+                <input type="text" id="nprInput" value="NPR" disabled />
+            </div>
+        </div>
+
+        <!-- Currency Selection -->
+        <div class="currency-selection">
+            <label for="currencySelect">To Currency</label>
+            <select id="currencySelect">
+                <option value="USD">USD</option>
+                <!-- <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option> -->
+                <!-- Add more currencies here -->
+            </select>
+        </div>
+
+        <!-- Fixed NPR Input -->
+
+
+        <!-- Convert Button -->
+        <button id="convertBtn">Convert</button>
+
+        <!-- Conversion Result -->
+        <div id="conversionResult"></div>
+
+    </div>
+
+    
+    <script src="./currency.css"></script>
+</body>
+</html>
