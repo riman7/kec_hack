@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: rgba(207, 218, 255, 0.719);
 
 }
 nav.navbar {
@@ -55,7 +55,10 @@ nav.navbar {
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 310px;
+}
+.container h1{
+  font-weight: 900;
 }
 
 input, select {
@@ -68,21 +71,30 @@ input, select {
 
 button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #ffae00;
     color: white;
+    width: 100%;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    border: solid #ffae00 1px;
+    transition: all ease .5s;
+    margin-bottom: 12px;
+    font-weight: 700;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #f2a500;
+    box-shadow:0 0 8px  #f7e3004a;
+    border: 1px solid #000000;
 }
-
+.infographic
 #conversionResult {
-    margin-top: 20px;
+  transition: all ease .3s;
+    margin: 10px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 900;
+    color: red;
 }
 
 input[disabled] {

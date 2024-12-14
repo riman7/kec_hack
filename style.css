@@ -9,7 +9,8 @@
     --backgroud-color: rgba(207, 218, 255, 0.719);
     --button-color: yellow;
     --orange: #fe9900;
-    
+    --blue: rgb(0, 102, 255);
+    --black: rgb(59, 58, 58);
 }
 *{
     margin: 0;
@@ -28,6 +29,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--backgroud-color);
+    transition: color ease-in-out 1s;
 }
 
 button {
@@ -64,28 +66,49 @@ nav.navbar {
   nav .map-button {
     text-align: center;
     cursor: pointer;
-  }
+  
+  } 
+
   body.withmap nav .map-button button{
-    background-color: #007BFF;
+    background-color: var(--backgroud-color);
+    color: var(--black);
   }
+nav{
+    border-bottom: solid rgba(255, 255, 255, 0.587) 1px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.486);
+}
+body.withmap nav{
+    border: none;
+    box-shadow: none;
+}
+
   nav .map-button button{
+    background-color: var(--black);
+    box-shadow: 0 0 7px hsl(0, 0%, 53%);
     font-size: 40px;
     font-weight: 900;
     width: 250px;
     height: 70px;
     border-radius: 30px;
+    transition: color ease-out .7s;
   }
-  nav .profile {
-    width: 35px;
-    height: 35px;
+  
+  body.withmap nav .map-button button:hover{
+    background-color:rgba(221, 229, 254, 0.801) ;
+    box-shadow: 0 0 7px hsl(0, 0%, 64%);
+  }
+  nav .map-button button:hover{
+    background-color: rgb(41, 41, 41);
+    box-shadow: 0 0 7px rgb(122, 122, 122);
+  }
+  nav .profile img{
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     background-color: white;
     text-align: right;
     border: 1px solid black;
-  }
-  nav.profile img{
-    width: 100%;
-    height: 100%;
+    object-fit: contain;
   }
 
 
@@ -153,7 +176,7 @@ body.withmap{
     max-width: 100vw;
     max-height: 100vh;
     overflow: hidden;
-    background-color: var(--orange);
+    background-color: var(--black);
 }
 
 
@@ -178,7 +201,6 @@ body.withmap{
     max-width: 100vw;
     max-height: 100vh;
     overflow: hidden;
-
 }
 div.search{
     width: 100%;
@@ -197,13 +219,17 @@ div.search{
         /* Style the input field */
 #pac-input {
     margin: 5px auto var(--horizontal-margin);
-    width: 30em;
-    height: var(--search-height);
+    width: 600px;
+    height: 36px;
     padding: 5px;
-    border-radius: 3em;
-    font-size: 2em;
-    border: 1px solid rgb(164, 164, 164) ;
+    border-radius: 4px;
+    font-size: 70;
+    border: 1px solid rgb(135, 135, 135) ;
 }
+#pac-input:focus, #origin-input:focus, #destination-input:focus{
+    outline: none;
+}
+
 
 /* Apply background image to the div or body */
 body.body-inital-page {
@@ -313,7 +339,7 @@ h2 {
 
 /* Styling individual buttons in the list */
 .button-list button {
-    background-color: #007bff;
+    background-color: var(--blue);
     min-width: 150px;
     color: white;
     padding: 12px 20px;
@@ -321,6 +347,7 @@ h2 {
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: 800;
     transition: background-color 0.3s ease;
 }
 
@@ -328,7 +355,15 @@ h2 {
 .button-list button:hover {
     background-color: #0056b3;
 }
-
+#Emergency-con-botton{
+    min-width: 260px;
+    font-weight: 900;
+    height: 3.5em;
+    background-color: rgb(227, 0, 0);
+}
+#Emergency-con-botton:hover{
+    background-color: rgb(185, 1, 1);
+}
 /* Make buttons stack vertically on smaller screens */
 @media (max-width: 768px) {
     .button-list {
@@ -343,24 +378,23 @@ h2 {
 }
 
 /* Optional: Style the line with text */
-.line-with-text {
-    margin: 20px 0;
-    text-align: center;
-}
 
-.line-with-text .line {
-    width: 80%;
-    margin: 0 auto;
-    border: 1px solid #ddd;
+#img-font{
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 220px;
 }
-
-.line-with-text .text {
-    font-size: 16px;
-    margin-top: -10px;
-    background-color: #fff;
-    padding: 0 10px;
+#img-font img{
+    width: 900px;
 }
-
+#img-font div{
+    display: flex;
+}
+#img-font div div{
+    width: 200px;
+    height: auto;
+}
 
 
 
@@ -411,50 +445,71 @@ h2 {
 
 
 
-
 /* Container for all packages */
 .packages {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Ensures responsiveness */
     padding: 20px;
 }
 
 /* Individual package styling */
-.package {
-    position: relative; /* Required for absolute positioning of the overlay */
-    flex: 1 1 calc(30% - 20px); /* Responsive width: 30% of container with spacing */
-    height: 250px; /* Fixed height for uniform look */
+a .package {
+    position: relative;
+    width: 450px; /* Slightly increased width */
+    height: 300px; /* Slightly increased height */
     border-radius: 10px;
-    overflow: hidden; /* Ensure content stays within the border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Background image and overlay */
-/* Background image and overlay */
-.package::before {
-    content: ''; /* Empty content for the overlay */
+/* Background image and overlay for each package */
+a .package.adventure::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('./images/advanture.jpg') center/cover no-repeat; /* Replace with your image URL */
-    opacity: 0.5; /* Reduced opacity */
-    z-index: 1; /* Place overlay behind the content */
+    background: url('./images/advanture.jpg') center/cover no-repeat;
+    opacity: 0.5;
+    z-index: 1;
 }
 
+a .package.luxury::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./images/luxary.jpg') center/cover no-repeat;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+a .package.family::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./images/Family_Package.jpg') center/cover no-repeat;
+    opacity: 0.5;
+    z-index: 1;
+}
 
 /* Content inside the package */
 .package-content {
     position: relative;
-    z-index: 2; /* Ensure content is above the overlay */
+    z-index: 2;
     text-align: center;
     padding: 20px;
-    color: #fff; /* Text color */
-    background-color: rgba(0, 0, 0, 0.5); /* Dark background for contrast */
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
     border-radius: 10px;
     display: flex;
@@ -472,23 +527,26 @@ h2 {
 
 /* Headings and buttons */
 .package h3 {
-    font-size: 20px;
+    font-size: 30px; /* Slightly larger font size */
     margin-bottom: 10px;
     color: #fff;
+    font-weight: 900
 }
 
 .package p {
-    font-size: 14px;
+    font-size: 16px; /* Improved readability */
     margin-bottom: 20px;
     color: #fff;
+    text-align: center;
+    max-width: 300px; /* Ensure consistent text wrapping */
 }
 
 .package button {
     background-color: var(--orange);
     color: white;
-    width: 140px;
+    width: 160px;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 20px; /* Larger button size */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -500,63 +558,179 @@ h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .packages {
+        gap: 15px;
+    }
+
     .package {
-        flex: 1 1 100%; /* Full width on smaller screens */
+        width: 90%; /* Adjust width to fit smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .package {
-        padding: 10px;
+        width: 100%; /* Full width on smaller screens */
     }
 
     .package h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .package p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .package button {
-        padding: 8px 16px;
+        padding: 10px 18px;
     }
 }
 
-
-
-
 /* Review Rating Section */
+/* Review and Rating Section */
 .review-rating-section {
-    padding: 40px;
-    background-color: #f4f4f4;
+    padding: 60px 20px;
     text-align: center;
 }
 
-h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+.review-rating-section h2 {
+    font-size: 36px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 600;
 }
 
+/* Container for all reviews */
 .package-reviews {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* Makes it responsive */
+    flex-wrap: wrap; /* Makes the layout responsive */
 }
 
+/* Individual review box */
 .package-review {
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    width: 30%; /* Adjust width for horizontal layout */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    border-radius: 12px;
+    width: 30%; /* Default size */
+    max-width: 350px; /* Prevent excessive widening */
+    text-align: center; /* Center-aligns content inside */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.package-review:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading for each package */
 .package-review h3 {
     font-size: 24px;
-    margin-bottom: 15px;
+    margin: 0;
+    color: #444;
+    font-weight: 600;
+}
+
+/* Average Rating Section */
+.ratings {
+    font-size: 16px;
+    color: #555;
+}
+
+.average-rating {
+    margin-bottom: 10px;
+}
+
+.avg-stars {
+    font-size: 18px;
+    color: #f39c12; /* Gold color for the rating */
+    font-weight: bold;
+}
+
+/* Review Form */
+.review-form textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
     color: #333;
+    resize: none;
+    transition: border 0.3s;
+}
+
+.review-form textarea:focus {
+    border: 1px solid #888;
+    outline: none;
+}
+
+/* Star Rating Section */
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.stars span {
+    font-size: 24px;
+    color: #ddd; /* Default star color */
+    transition: color 0.3s;
+}
+
+.stars span:hover,
+.stars span:hover ~ span,
+.stars span.active {
+    color: #f39c12; /* Highlighted star color */
+}
+
+/* Submit Button */
+.review-form button {
+    background-color: var(--orange);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center; /* Center the button */
+    margin: 0 auto; /* Align horizontally in the center */
+}
+
+.review-form button:hover {
+    background-color: var(--orange);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .package-review {
+        width: 45%; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .package-review {
+        width: 100%; /* Full width for very small screens */
+    }
+
+    .review-rating-section h2 {
+        font-size: 28px;
+    }
+
+    .package-review h3 {
+        font-size: 20px;
+    }
+
+    .review-form textarea {
+        height: 60px;
+    }
 }
 
 
@@ -676,6 +850,7 @@ div.infographic img{
     width: 100%;
     height: auto; /* Maintain the aspect ratio of the image */
     object-fit: cover;
+    mix-blend-mode: screen;
 }
 
 
