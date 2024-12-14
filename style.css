@@ -288,7 +288,7 @@ h1 {
 
 .box {
     background-color: rgba(217, 217, 221, 0.8); /* Initial blue color with some transparency */
-    color: white; /* Text color */
+    color: rgba(27, 27, 105, 0.8);; /* Text color */
     padding: 20px; /* Padding for the box */
     text-align: center; /* Center the text */
     transition: background-color 0.3s ease, opacity 0.3s ease; /* Transition for smooth effect */
@@ -298,6 +298,7 @@ h1 {
 .box:hover {
     background-color: rgba(27, 27, 105, 0.8); /* Full blue color on hover */
     opacity: 0.7; /* Decrease transparency on hover */
+    color: white;
 }
 
 /* Style for headings */
@@ -864,11 +865,10 @@ div.infographic img{
     .footer {
         background-color: #333;
         color: #fff;
-        padding: 20px 0;
+        padding: 20px 40px;
         text-align: center;
         display: flex;
         flex-direction: column;
-        gap: 40px;
     }
     
     .footer-content {
@@ -918,15 +918,20 @@ div.infographic img{
     }
     /* .footer-section.social */
     .footer-section.social a {
-        color: #fff;
-        margin: 10px 20px 0 20px;
-        font-size: 16px;
+        color: #ffffffac;
+        margin: 10px 30px 0 30px;
+        font-size: 34px;
         text-decoration: none;
         transition: color 0.3s;
     }
     
     .footer-section.social a:hover {
         color: #ff9900;
+    }
+    .footer-section.social h2{
+        font-size: 30px;
+        font-weight: 800;
+        color:rgba(255, 255, 255, 0.71);
     }
     .footer-section.social div{
         display: flex;
