@@ -63,6 +63,10 @@
     bottom: 0;
     width: 100%;
 }
+    a:link{
+        text-decoration: none;
+        color:red;
+    }
     </style>
 </head>
 <body>
@@ -103,7 +107,7 @@
 <input type="file" id="fileUpload" name="fileUpload" accept=".pdf,.doc,.docx,.jpg,.png" onchange="updateFileName()">
     <div class="terms">
         <input type="checkbox" id="terms" name="terms" required>
-        <label for="terms">I agree with the <a href="/terms-and-conditions" target="_blank">terms and conditions</a> and I am fully liable that all the information provided are true.</label>
+        <label for="terms">I agree with the <a href="/terms-and-conditions" title="apple" target="_blank">terms and conditions</a> and I am fully liable that all the information provided are true.</label>
     </div>
     <br>
     <button type="submit">Submit</button>
