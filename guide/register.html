@@ -5,23 +5,15 @@
 </head>
 <body>
     <h2>Enter Your Guide Details</h2>
-    <form action="./add_guide.php" method="POST">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="location">Location:</label><br>
-        <input type="text" id="location" name="location" required><br><br>
-        
-        <label for="bio">Bio:</label><br>
-        <textarea id="bio" name="bio" rows="4" cols="30" required></textarea><br><br>
-        
-        <label for="experience">Experience (Years):</label><br>
-        <input type="number" id="experience" name="experience" min="0" required><br><br>
-        
-        <label for="rate">Rate per Hour:</label><br>
-        <input type="number" id="rate" name="rate" step="0.01" required><br><br>
-        
-        <button type="submit">Submit</button>
+    <form method="GET" action="./add_guide.php">
+        <label for="name">Guide Name:</label>
+        <input type="text" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+        <label for="experience">Experience (in years):</label>
+        <input type="number" name="experience" required><br>
+        <input type="submit" value="Submit">
     </form>
+    
 </body>
 </html>
