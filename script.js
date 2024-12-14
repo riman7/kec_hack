@@ -16,7 +16,6 @@ function openmap(){
             document.getElementById("map-all").style.display = "none";
             document.getElementById("no-map").style.display = "block";
             traveller_body.classList.toggle("withmap");
-            traveller_body.classList.toggle("withmap");
             map_button2.innerHTML = "MAP";
         }
 }
