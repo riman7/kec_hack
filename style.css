@@ -10,15 +10,18 @@
     --button-color: yellow;
     
 }
-#convertBtn {
-    margin-right: 10px; /* Adjust the value as needed */
-}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+.button-container {
+    margin-bottom: 10px; /* Adjust the value as needed */
+}
 
+.button-container button {
+    margin-bottom: 10px; /* This will add space between the buttons */
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
