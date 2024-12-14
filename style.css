@@ -130,7 +130,7 @@ body.body-inital-page {
 body.body-inital-page h1{
     font-family: "Rowdies", sans-serif;
     font-size: 10rem;
-    color: #26156ce9;
+    color: #180c49e9;
 }
 /* Pseudo-element for the background image */
 .body-inital-page::before{
@@ -145,16 +145,16 @@ body.body-inital-page h1{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: .1; /* Reduce opacity here */
-    z-index: -1; /* Place it behind the content */
+    opacity: 0;
+    z-index: -1;
 }
 .box{
     border: 2px solid rgba(58, 1, 243, 0.8);
     color: #2575fc;
-    width: 32rem;
+    width: 350px;
     padding: 20px 0;
     background-color:rgba(15, 15, 110, 0.267);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(4, 1, 79, 0.2);
     text-align: center;
     margin: 10px;
     font-size: 45px;
@@ -250,7 +250,7 @@ body.body-inital-page {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.5; /* Reduce opacity here */
+    opacity: 0.1; /* Reduce opacity here */
     z-index: -1; 
 }
 
@@ -288,7 +288,7 @@ h1 {
 
 .box {
     background-color: rgba(217, 217, 221, 0.8); /* Initial blue color with some transparency */
-    color: rgba(27, 27, 105, 0.8);; /* Text color */
+    color: rgba(18, 18, 130, 0.8);; /* Text color */
     padding: 20px; /* Padding for the box */
     text-align: center; /* Center the text */
     transition: background-color 0.3s ease, opacity 0.3s ease; /* Transition for smooth effect */
