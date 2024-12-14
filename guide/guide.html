@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traveler's Guide</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo whitebg.png">
     <link rel="stylesheet" href="styles.css">
     <style>
         
@@ -172,6 +173,20 @@ nav a:hover {
     background-color: #ba2626; /* Change to a different color on hover */
     transform: scale(1.1); /* Slightly increase the size */
 }       
+nav {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the left */
+    margin: 40px 0;
+}
+
+nav img {
+    margin-right: 100px; /* Add some space between the image and the title */
+}
+
+nav strong {
+    margin-right: 15px; /* Add some space between the title and the links */
+}   
 *{
     font-family: Monaco;
 }
@@ -188,6 +203,7 @@ footer{
 
     <header>
         <nav>
+            <img src="/images/logo whitebg.png" alt="" width="60" height="48">
             <strong class="hone">Traveler's Guide</strong>
             <a href="/guide/nav bar/form.html">Registration form</a>
             <a href="/guide/nav bar/about.html">About Us</a>
